@@ -1,10 +1,13 @@
+import { getCookie } from "./cookies.js";
 window.onload = () => {
-  if (localStorage.getItem("loggedIn") !== "true") {
+  if (getCookie("loggedIn") !== "true") {
     window.location.href = "index.html";
+  } else {
+    const login = document.getElementById("login");
+    login.textContent = getCookie("login");
   }
 };
 
 function logout() {
-  //localStorage.removeItem("loggedIn");
   window.location.href = "index.html";
 }
