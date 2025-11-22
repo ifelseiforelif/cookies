@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Шумовой фон */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2P4z8DwHwAF+gJ/OmZ2OgAAAABJRU5ErkJggg==")
+    repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.login-box {
+  position: relative;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
